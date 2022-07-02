@@ -124,13 +124,13 @@ const IngredientInput: React.FC = () => {
           <Tbody>
             <Tr>
               <Td>
-                {nutritionData?.energy.toFixed(2)}
+                {(((nutritionData?.energy ?? 1) / (nutritionData?.amount ?? 1)) * 100).toFixed(2)}
               </Td>
               <Td>
-                {nutritionData?.carbs.toFixed(2)}
+                {(((nutritionData?.carbs ?? 1) / (nutritionData?.amount ?? 1)) * 100).toFixed(2)}
               </Td>
               <Td>
-                {nutritionData?.fat.toFixed(2)}
+                {(((nutritionData?.fat ?? 1) / (nutritionData?.amount ?? 1)) * 100).toFixed(2)}
               </Td>
             </Tr>
           </Tbody>
